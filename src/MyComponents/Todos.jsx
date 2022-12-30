@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Todos = () => {
+const Todos = ({toda}) => {
   return (
-    <div>Todos</div>
+    <div>{toda} Todos first props is {toda}</div>
   )
 }
 

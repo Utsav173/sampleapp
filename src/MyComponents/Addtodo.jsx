@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Addtodo = () => {
+const Addtodo = ({fams}) => {
   return (
-    <div>Addtodo</div>
+    <div>Addtodo {fams} is pros is</div>
   )
 }
 

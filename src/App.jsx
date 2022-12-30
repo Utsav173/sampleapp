@@ -6,11 +6,11 @@ import {
   Route,
   Routes
 } from "react-router-dom";
-import Todos from "./MyComponents/Todos";
 import Header from "./MyComponents/Header";
 import Footer from "./MyComponents/Footer";
 import About from "./MyComponents/About";
 import Addtodo from "./MyComponents/Addtodo";
+import Combine from "./MyComponents/Combine";
 
 
 function App(todo) {
@@ -53,13 +53,14 @@ function App(todo) {
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(todos));
   }, [todos]);
+  let toda = "toda";
+  let fams = "fams";
   return (
     <Router>
       <Header title="Seenu Todo List" />
       <Routes>
-        <Route exact path="/" element={<Todos/>}/>
+        <Route exact path="/" element={<Combine promps={toda} fams={fams}/>}/>
         <Route exact path="/about" element={<About/>}/>
-        <Route exact path="/addtodo" element={<Addtodo/>}/>
       </Routes>
       <Footer />
     </Router>
